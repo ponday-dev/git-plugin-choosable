@@ -1,34 +1,27 @@
-# Golang on Docker
+# git-plugin-choosable
 
-The purpose of this repository is to run and build Golang on the Docker container.  
+This is a git plugin that allows you to select targets from the branch list for `git checkout` and `git branch -d`.
 
-It is using Alpine Linux based Golang Docker image. And also, it uses the make as task runner.
+## Installation
+
+```bash
+brew install git-plugin-choosable
+```
 
 ## How to use
 
-### Build image
+### Toggle current branch
+
+When you want to toggle current branch with this plugin, please use `git switch` instead of `git checkout`.
 
 ```bash
-git clone https://github.com/ponday-dev/golang-docker.git
-docker-compose build
+git switch
 ```
 
-### Install packages for golang
+### Delete branch
+
+When you want to delete branch with this plugin, please use `git remove` instead of `git branch -d`
 
 ```bash
-make get PACKAGE=<package_name>
-```
-
-When this command is executed, the dependency is record in the `work/go.mod` file and you will be able to use that feature.
-
-### Run source file
-
-```bash
-make run
-```
-
-### Build file
-
-```bash
-make build
+git remove
 ```
