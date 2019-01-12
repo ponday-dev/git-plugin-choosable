@@ -5,6 +5,7 @@ This is a git plugin that allows you to select targets from the branch list for 
 ## Installation
 
 ```bash
+brew tap ponday-dev/git-plugin-choosable
 brew install git-plugin-choosable
 ```
 
