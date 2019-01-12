@@ -14,5 +14,5 @@ run:
 
 .PHONY: build
 build:clean
-	docker-compose run app ash -c "GOOS=darwin GOARCH=amd64 go build -o dist/git-select select.go"
+	docker-compose run app ash -c "GOOS=darwin GOARCH=amd64 go build -o dist/git-switch switch.go"
 	docker-compose run app ash -c "GOOS=darwin GOARCH=amd64 go build -o dist/git-remove remove.go"
